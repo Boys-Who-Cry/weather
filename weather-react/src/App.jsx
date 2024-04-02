@@ -1,5 +1,11 @@
+import Home from "./Home.jsx";
+import "./index.css";
 const App = () => {
-  return <></>;
+  return (
+    <>
+      <Home />
+    </>
+  );
 };
 
 export default App;
