@@ -1,15 +1,16 @@
 import FetchWeatherForm from "./FetchWeatherForm";
+import "./index.css";
 import styles from "./main.module.css";
 const Home = () => {
   return (
     <>
-      <main className={styles.container}>
-        <section className={styles.grid}>
+      <main className="container">
+        <section className={styles.home__grid}>
           <section>
-            <h1 className={styles.grid__header}>Weather</h1>
+            <h1 className={styles.home__grid__header}>Weather</h1>
           </section>
-          <section className={styles.main__form}>
-            <FetchWeatherForm />
+          <section className={styles.form}>
+            <FetchWeatherForm setFormClass={styles.home__form__grid} />
           </section>
         </section>
       </main>
