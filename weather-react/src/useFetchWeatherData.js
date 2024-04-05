@@ -22,12 +22,13 @@ export const useFetchWeatherData = (location) => {
         const json = await response.json();
         setLoading(false);
         setWeatherData(json);
+        console.log(json);
       } catch (error) {
         setLoading(false);
         setError(error);
       }
     };
     fetchData();
-  }, [apiCall]);
+  }, []);
   return { data, error, loading };
 };
