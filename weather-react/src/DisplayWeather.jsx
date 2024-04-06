@@ -6,21 +6,21 @@ const DisplayWeather = (props) => {
   return (
     <>
       {data && (
-        <main>
-          <section className={styles.displayWeatherGrid}>
-            <article>
-              <h2>{data.name}</h2>
-            </article>
-            <article>
-              <h2>{data.main.temp}</h2>
-              <section>
-                <p>H: {data.main.temp_max}</p>
-                <p>L: {data.main.temp_min}</p>
-              </section>
-            </article>
-            <article>{data.weather[0].main}</article>
+        <article className={styles.displayWeatherGrid}>
+          <section className={styles.displayWeatherGrid__location}>
+            <h2>{data.name}</h2>
           </section>
-        </main>
+          <section className={styles.displayWeatherGrid__temperature}>
+            <h3>{Math.floor(data.main.temp)}&deg;</h3>
+            <section>
+              <p>H: {Math.floor(data.main.temp_max)}&deg;</p>
+              <p>L: {Math.floor(data.main.temp_min)}&deg;</p>
+            </section>
+          </section>
+          <section className={styles.displayWeatherGrid__weather}>
+            <p>{data.weather[0].main}</p>
+          </section>
+        </article>
       )}
     </>
   );
