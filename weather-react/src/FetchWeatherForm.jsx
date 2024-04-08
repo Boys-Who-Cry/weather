@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Button from "./Button";
 import { Link } from "react-router-dom";
+import Button from "./Button";
 const FetchWeatherForm = (props) => {
   const [inputValue, setInputValue] = useState("");
   const handleInput = (event) => {
@@ -15,7 +15,7 @@ const FetchWeatherForm = (props) => {
           type="text"
           placeholder="Enter a city or zip code"
         />
-        <Link to="weather" state={{ location: inputValue }}>
+        <Link to={`../weather/${inputValue}`}>
           <Button buttonText="Search" />
         </Link>
       </form>

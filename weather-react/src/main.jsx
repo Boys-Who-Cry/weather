@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import Weather from "./Weather.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import DisplayWeather from "./DisplayWeather.jsx";
 
 const router = createBrowserRouter([
   {
@@ -11,7 +10,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "weather",
+    path: "weather/:location",
     element: <Weather />,
   },
 ]);
