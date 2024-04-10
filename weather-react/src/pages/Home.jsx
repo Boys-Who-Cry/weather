@@ -1,6 +1,6 @@
-import FetchWeatherForm from "./FetchWeatherForm";
-import "./index.css";
-import styles from "./main.module.css";
+import FetchWeatherForm from "../components/FetchWeatherForm";
+import "../css/index.css";
+import styles from "../css/main.module.css";
 const Home = () => {
   return (
     <>

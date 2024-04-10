@@ -1,7 +1,7 @@
-import FetchWeatherForm from "./FetchWeatherForm";
-import DisplayWeather from "./DisplayWeather";
+import FetchWeatherForm from "../components/FetchWeatherForm";
+import DisplayWeather from "../components/DisplayWeather";
 import { useParams } from "react-router-dom";
-import styles from "./main.module.css";
+import styles from "../css/main.module.css";
 const Weather = () => {
   const { location } = useParams();
   return (

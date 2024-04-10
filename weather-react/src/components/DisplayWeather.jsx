@@ -1,5 +1,5 @@
-import { useFetchWeatherData } from "./useFetchWeatherData";
-import styles from "./main.module.css";
+import { useFetchWeatherData } from "../hooks/useFetchWeatherData";
+import styles from "../css/main.module.css";
 const DisplayWeather = (props) => {
   const location = props.location;
   const { data, error, loading } = useFetchWeatherData(location);

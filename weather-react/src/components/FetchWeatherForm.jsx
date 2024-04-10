@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Button from "./Button";
+import Button from "../utils/Button";
 const FetchWeatherForm = (props) => {
   const [inputValue, setInputValue] = useState("");
   const handleInput = (event) => {
