@@ -3,7 +3,7 @@ const Error = () => {
   return (
     <>
       <p>This route is invalid.</p>
-      <Link style={{ color: "red" }} to="/">
+      <Link style={{ color: "white" }} to="/">
         Click here to return to home page.
       </Link>
     </>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 export const useFetchWeatherData = (location) => {
-  const [data, setWeatherData] = useState();
+  const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const apiKey = "fdfaf3e5d5694d644e093b6be5f43f07";
@@ -21,14 +21,14 @@ export const useFetchWeatherData = (location) => {
         const response = await fetch(apiCall);
         const json = await response.json();
         setLoading(false);
-        setWeatherData(json);
-        console.log(json);
+        setData(json);
+        console.log(json.data.main.temp);
       } catch (error) {
         setLoading(false);
         setError(error);
       }
     };
     fetchData();
-  }, []);
-  return { data, error, loading };
+  }, [location]);
+  return { data, loading, error };
 };

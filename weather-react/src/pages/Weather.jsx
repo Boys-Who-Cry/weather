@@ -1,9 +1,11 @@
-import FetchWeatherForm from "../components/FetchWeatherForm";
-import DisplayWeather from "../components/DisplayWeather";
+import FetchWeatherForm from "../components/FetchWeatherForm.jsx";
+import DisplayWeather from "../components/DisplayWeather.jsx";
+import { useFetchWeatherData } from "../hooks/useFetchWeatherData.js";
 import { useParams } from "react-router-dom";
 import styles from "../css/main.module.css";
 const Weather = () => {
   const { location } = useParams();
+  const { data, loading, error } = useFetchWeatherData(location);
   return (
     <>
       <main className="container">
@@ -11,7 +13,7 @@ const Weather = () => {
           <FetchWeatherForm setFormClass={styles.weather__form__grid} />
         </section>
         <section>
-          <DisplayWeather location={location} />
+          <DisplayWeather data={data} />
         </section>
       </main>
     </>

@@ -1,8 +1,6 @@
-import { useFetchWeatherData } from "../hooks/useFetchWeatherData";
 import styles from "../css/main.module.css";
 const DisplayWeather = (props) => {
-  const location = props.location;
-  const { data, error, loading } = useFetchWeatherData(location);
+  const data = props.data;
   return (
     <>
       {data && (
@@ -17,12 +15,15 @@ const DisplayWeather = (props) => {
               <p>L: {Math.floor(data.main.temp_min)}&deg;</p>
             </section>
           </section>
-          <section className={styles.displayWeatherGrid__weather}>
-            <p>{data.weather[0].main}</p>
-          </section>
         </article>
       )}
     </>
   );
 };
 export default DisplayWeather;
+
+/*
+<section className={styles.displayWeatherGrid__weather}>
+            <p>{data.weather[0].main}</p>
+          </section>
+*/
