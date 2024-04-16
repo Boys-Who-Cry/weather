@@ -16,7 +16,7 @@ const FetchWeatherForm = (props) => {
           placeholder="Enter a city or zip code"
         />
         <Link onClick={() => setInputValue("")} to={`../weather/${inputValue}`}>
-          <Button buttonText="Search" />
+          <Button type="submit" buttonText="Search" />
         </Link>
       </form>
     </>

@@ -1,4 +1,5 @@
 import App from "../App.jsx";
+import Account from "../pages/Account.jsx";
 import Weather from "../pages/Weather.jsx";
 import Error from "../utils/Error.jsx";
 const routes = [
@@ -14,6 +15,10 @@ const routes = [
   {
     path: "weather/",
     element: <Error />,
+  },
+  {
+    path: "account",
+    element: <Account />,
   },
 ];
 export default routes;

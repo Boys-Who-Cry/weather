@@ -1,17 +1,13 @@
-.home__grid {
+.home__grid,
+.account__container {
   display: grid;
   margin-top: 20%;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
 }
 .home__grid__header {
   font-size: 4rem;
   text-align: center;
   margin: 0;
-}
-.form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 /*Fetch Weather Form*/
 .home__form__grid {
@@ -20,12 +16,14 @@
   width: 100%;
   grid-gap: 10px;
 }
-.home__form__grid input[type="text"] {
+.home__form__grid input[type="text"],
+.account__container__form input {
   padding: 10px;
   border: 2px solid white;
   border-radius: 5px;
 }
-.home__form__grid button {
+.home__form__grid button,
+.account__container__form button {
   padding: 10px;
   width: 100%;
 }
@@ -55,12 +53,12 @@
 }
 .displayWeatherGrid__location,
 .displayWeatherGrid__temperature,
-.displayWeatherGrid__weather {
+.displayWeatherGrid__weather,
+.account__page,
+.form {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.displayWeatherGrid__location {
 }
 .displayWeatherGrid__location h2 {
   font-size: 2.5rem;
@@ -80,6 +78,37 @@
   font-size: 0.9rem;
   font-weight: bold;
 }
+
+.home__grid section p,
+.display__weather__go__home__link {
+  margin: 25px 0 0 0;
+  text-align: center;
+}
+.display__weather__go__home__link p {
+  margin: 0;
+}
+
+/*Account Page*/
+
+.account__container__header {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.account__container__form {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+.account__container__subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.account__question__text {
+  text-align: center;
+}
+
 @media only screen and (min-width: 641px) {
   .container {
     width: 75%;

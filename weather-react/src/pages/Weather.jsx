@@ -1,7 +1,7 @@
 import FetchWeatherForm from "../components/FetchWeatherForm.jsx";
 import DisplayWeather from "../components/DisplayWeather.jsx";
 import { useFetchWeatherData } from "../hooks/useFetchWeatherData.js";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styles from "../css/main.module.css";
 const Weather = () => {
   const { location } = useParams();
@@ -14,6 +14,11 @@ const Weather = () => {
         </section>
         <section>
           <DisplayWeather data={data} />
+        </section>
+        <section className={styles.display__weather__go__home__link}>
+          <p>
+            <Link to="/">Back Home</Link>
+          </p>
         </section>
       </main>
     </>

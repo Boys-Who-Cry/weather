@@ -14,6 +14,7 @@ body {
   width: 80%;
   margin: auto;
 }
+
 .weatherButton {
   font-size: 0.9rem;
   letter-spacing: 2px;
@@ -24,4 +25,9 @@ body {
 }
 .weatherButton:hover {
   cursor: pointer;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
 }
