@@ -1,8 +1,8 @@
 .home__grid,
 .account__container {
   display: grid;
-  margin-top: 20%;
   grid-template-rows: repeat(auto, 1fr);
+  margin: 20% auto 0 auto;
 }
 .home__grid__header {
   font-size: 4rem;
@@ -54,7 +54,6 @@
 .displayWeatherGrid__location,
 .displayWeatherGrid__temperature,
 .displayWeatherGrid__weather,
-.account__page,
 .form {
   display: flex;
   align-items: center;
@@ -100,18 +99,19 @@
   grid-template-rows: 1fr;
   gap: 10px;
 }
+.account__question__text {
+  text-align: center;
+}
 .account__container__subgrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-}
-.account__question__text {
-  text-align: center;
+  width: 100%;
 }
 
 @media only screen and (min-width: 641px) {
   .container {
-    width: 75%;
+    margin: 0;
   }
   .home__form__grid {
     grid-template-columns: repeat(12, 1fr);
@@ -119,11 +119,21 @@
   .home__form__grid input[type="text"] {
     grid-column: 2 / 11;
   }
+
+  .weather__form__grid input[type="text"] {
+    grid-column: 3 / 9;
+  }
+  .weather__form__grid a {
+    grid-column: 10 / 13;
+  }
 }
 
 @media only screen and (min-width: 768px) {
+  .home__grid {
+    width: 75%;
+  }
   .weather__form__grid input[type="text"] {
-    grid-column: 1 / 9;
+    grid-column: 3 / 9;
   }
   .weather__form__grid a {
     grid-column: 10 / 13;
@@ -132,11 +142,18 @@
   .displayWeatherGrid {
     margin: 10% 0 0 0;
   }
+  .account__container {
+    width: 75%;
+    margin: 20% auto 0 auto;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
   .container {
     width: 60%;
+  }
+  .home__grid {
+    width: 50%;
   }
   .home__form__grid {
     grid-template-columns: repeat(12, 1fr);
@@ -157,5 +174,9 @@
 
   .displayWeatherGrid {
     margin: 10% 0 0 0;
+  }
+  .account__container {
+    width: 50%;
+    margin: 10% auto 0 auto;
   }
 }
