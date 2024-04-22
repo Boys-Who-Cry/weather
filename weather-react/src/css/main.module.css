@@ -36,7 +36,7 @@
   width: 100%;
 }
 .weather__form__grid input[type="text"] {
-  grid-column: 1 / 9;
+  grid-column: 2 / 9;
   padding: 10px;
   border: 2px solid white;
   border-radius: 5px;
@@ -113,9 +113,20 @@
 .single__location__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  text-align: center;
+  margin: auto;
+  margin: 25px 0;
 }
-.single__location__grid h2 {
+.single__location__grid h2,
+.single__location__grid p {
+  margin: 10px;
   color: white;
+}
+.single__location__subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.single__location__subgrid p {
 }
 
 @media only screen and (min-width: 641px) {

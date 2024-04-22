@@ -10,10 +10,10 @@ const SingleLocation = (props) => {
           <p>{data.weather.description}</p>
         </section>
         <section>
-          <p>{data.main.temp}</p>
-          <section>
-            <p>{data.main.temp_min}</p>
-            <p>{data.main.temp_max}</p>
+          <p style={{ fontSize: "1.3rem" }}>{data.main.temp}</p>
+          <section className={styles.single__location__subgrid}>
+            <p style={{ textAlign: "right" }}>H: {data.main.temp_max}</p>
+            <p style={{ textAlign: "left" }}>L: {data.main.temp_min}</p>
           </section>
         </section>
       </section>
