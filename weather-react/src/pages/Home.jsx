@@ -11,10 +11,7 @@ const Home = () => {
             <h1 className={styles.home__grid__header}>Weather</h1>
           </section>
           <section className={styles.form}>
-            <FetchWeatherForm
-              renderWeatherButton={true}
-              setFormClass={styles.home__form__grid}
-            />
+            <FetchWeatherForm doWeatherButton={true} />
           </section>
           <section>
             <p>

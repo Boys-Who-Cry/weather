@@ -20,7 +20,7 @@
 .account__container__form input {
   padding: 10px;
   border: 2px solid white;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .home__form__grid button,
 .account__container__form button {

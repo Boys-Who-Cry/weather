@@ -1,0 +1,22 @@
+.form__grid {
+  display: grid;
+  grid-template-columns: calc(75% - 5px) calc(25% - 5px);
+  width: 100%;
+  gap: 10px;
+}
+.form__grid a {
+  text-decoration: underline;
+  width: 100%;
+}
+.city__input {
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+.weather__button {
+  padding: 10px;
+  width: 100%;
+}
+.weather__button:hover {
+  cursor: pointer;
+}
