@@ -2,7 +2,13 @@ import "../css/index.css";
 const Button = (props) => {
   return (
     <>
-      <button className="weatherButton">{props.buttonText}</button>
+      <button
+        type={props.type}
+        onClick={props.handleClick}
+        className="weatherButton"
+      >
+        {props.buttonText}
+      </button>
     </>
   );
 };

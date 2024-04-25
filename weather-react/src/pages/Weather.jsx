@@ -10,7 +10,10 @@ const Weather = () => {
     <>
       <main className="container">
         <section>
-          <FetchWeatherForm setFormClass={styles.weather__form__grid} />
+          <FetchWeatherForm
+            renderWeatherButton={true}
+            setFormClass={styles.weather__form__grid}
+          />
         </section>
         <section>
           <DisplayWeather data={data} />

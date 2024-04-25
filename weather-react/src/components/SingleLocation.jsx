@@ -2,15 +2,6 @@ import "../css/index.css";
 import styles from "../css/main.module.css";
 const SingleLocation = (props) => {
   const data = props.data;
-  const locationList = props.locationList;
-  const setLocationList = props.setLocationList;
-  //Delete locations from list
-  const deleteFromList = (itemToBeDeleted) => {
-    const filtered = locationList.filter((item) => {
-      return item.name !== itemToBeDeleted;
-    });
-    setLocationList(filtered);
-  };
   return (
     <>
       <section className={styles.single__location__grid}>
@@ -27,12 +18,7 @@ const SingleLocation = (props) => {
         </section>
         <section>
           <p
-            onClick={(event) => {
-              deleteFromList(
-                event.target.parentNode.parentNode.childNodes[0].childNodes[0]
-                  .textContent
-              );
-            }}
+            onClick={() => props.handleClick(data.id)}
             className={styles.single__location__delete}
           >
             &times;
