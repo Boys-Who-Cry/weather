@@ -1,0 +1,31 @@
+.home__grid {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  margin: 15% auto 0 auto;
+  width: 100%;
+}
+.home__grid__header__container h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin: 0;
+}
+.home__grid__accountLink__container {
+  text-align: center;
+}
+.home__grid__header__container,
+.home__grid__form__container,
+.home__grid__accountLink__container {
+  padding: 12.5px 0;
+}
+@media only screen and (min-width: 641px) {
+}
+@media only screen and (min-width: 768px) {
+  .home__grid {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .home__grid {
+    width: 60%;
+  }
+}

@@ -1,6 +1,6 @@
 .form__grid {
   display: grid;
-  grid-template-columns: calc(75% - 5px) calc(25% - 5px);
+  grid-template-rows: auto auto;
   width: 100%;
   gap: 10px;
 }
@@ -19,4 +19,21 @@
 }
 .weather__button:hover {
   cursor: pointer;
+}
+
+@media only screen and (min-width: 641px) {
+  .form__grid {
+    grid-template-columns: calc(85% - 10px) calc(15% - 10px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .form__grid {
+    grid-template-columns: calc(82.5% - 10px) calc(17.5% - 10px);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .form__grid {
+    grid-template-columns: calc(80% - 10px) calc(20% - 10px);
+  }
 }
