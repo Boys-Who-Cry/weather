@@ -11,11 +11,11 @@ const DisplayWeather = (props) => {
           </section>
           <section className={styles.displayWeatherGrid__temperature}>
             <h3>{Math.floor(data.main.temp)}&deg;</h3>
-            <p>{data.weather[0].description}</p>
             <section>
               <p>H: {Math.floor(data.main.temp_max)}&deg;</p>
               <p>L: {Math.floor(data.main.temp_min)}&deg;</p>
             </section>
+            <p>{data.weather[0].description}</p>
           </section>
         </article>
       )}

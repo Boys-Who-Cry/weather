@@ -18,10 +18,13 @@
   padding: 12.5px 0;
 }
 @media only screen and (min-width: 641px) {
+  .home__grid {
+    width: 75%;
+  }
 }
 @media only screen and (min-width: 768px) {
   .home__grid {
-    width: 80%;
+    width: 70%;
   }
 }
 @media only screen and (min-width: 1024px) {

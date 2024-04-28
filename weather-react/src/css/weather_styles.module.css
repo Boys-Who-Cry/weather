@@ -1,12 +1,18 @@
-.form__grid {
+.weather__grid {
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: repeat(4, auto);
+  margin: 5% auto 0 auto;
   width: 100%;
-  gap: 10px;
 }
-.form__grid a {
-  text-decoration: underline;
+.weather__grid__accountLink__container {
+  text-align: center;
+}
+/*FORM*/
+.weather__form__grid {
+  display: grid;
+  grid-template-columns: calc(75% - 10px) calc(25% - 10px);
   width: 100%;
+  gap: 20px;
 }
 .city__input {
   padding: 10px;
@@ -20,11 +26,20 @@
 .weather__button:hover {
   cursor: pointer;
 }
+/*END FORM*/
+
+.weather__grid__home__container {
+  text-align: center;
+  margin: 5% 0 0 0;
+}
 
 @media only screen and (min-width: 641px) {
   .form__grid {
     grid-template-columns: calc(80% - 10px) calc(20% - 10px);
     gap: 20px;
+  }
+  .weather__grid {
+    width: 75%;
   }
 }
 
@@ -33,9 +48,15 @@
     grid-template-columns: calc(80% - 10px) calc(20% - 10px);
     gap: 20px;
   }
+  .weather__grid {
+    width: 70%;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .form__grid {
     grid-template-columns: calc(80% - 10px) calc(20% - 10px);
+  }
+  .weather__grid {
+    width: 60%;
   }
 }
