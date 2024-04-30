@@ -13,7 +13,7 @@ const Home = () => {
           </section>
           <section className={home__styles.home__grid__form__container}>
             <FetchWeatherForm
-              doWeatherButton={true}
+              renderWeatherButton={true}
               setFormClassName={form__styles.form__grid}
               setFormInputName={form__styles.city__input}
               setFormButtonName={form__styles.weather__button}

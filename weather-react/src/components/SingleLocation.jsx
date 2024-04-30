@@ -1,17 +1,17 @@
 import "../css/index.css";
-import styles from "../css/main.module.css";
+import ml__styles from "../css/ml.module.css";
 const SingleLocation = (props) => {
   const data = props.data;
   return (
     <>
-      <section className={styles.single__location__grid}>
-        <section className={styles.single__location__grid__labels}>
+      <article className={ml__styles.single__location__grid}>
+        <section className={ml__styles.single__location__grid__labels}>
           <p>{data.name}</p>
           <p>{data.weather.description}</p>
         </section>
-        <section className={styles.single__location__grid__temps}>
+        <section className={ml__styles.single__location__grid__temps}>
           <p>{data.main.temp}</p>
-          <section className={styles.single__location__subgrid}>
+          <section className={ml__styles.single__location__subgrid}>
             <p>H: {data.main.temp_max}</p>
             <p>L: {data.main.temp_min}</p>
           </section>
@@ -19,12 +19,12 @@ const SingleLocation = (props) => {
         <section>
           <p
             onClick={() => props.handleClick(data.id)}
-            className={styles.single__location__delete}
+            className={ml__styles.single__location__delete}
           >
             &times;
           </p>
         </section>
-      </section>
+      </article>
     </>
   );
 };

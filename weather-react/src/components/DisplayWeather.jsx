@@ -23,9 +23,3 @@ const DisplayWeather = (props) => {
   );
 };
 export default DisplayWeather;
-
-/*
-<section className={styles.displayWeatherGrid__weather}>
-            <p>{data.weather[0].main}</p>
-          </section>
-*/

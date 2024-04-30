@@ -1,0 +1,81 @@
+.ml__container {
+  margin: auto;
+}
+.weather__grid__form__container {
+  margin: 5% 0 0 0;
+}
+/*FORM*/
+.weather__form__grid {
+  display: grid;
+  grid-template-columns: calc(75% - 10px) calc(25% - 10px);
+  width: 100%;
+  gap: 20px;
+}
+.weather__input {
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+.weather__button {
+  padding: 10px;
+  width: 100%;
+}
+.weather__button:hover {
+  cursor: pointer;
+}
+/*END FORM*/
+
+.single__location__container {
+  width: 100%;
+  margin: 7.5% auto 0 auto;
+}
+.single__location__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 20px;
+  text-align: center;
+  margin: 25px 0;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 15px;
+}
+.single__location__grid__labels,
+.single__location__grid__temps {
+  display: flex;
+  flex-direction: column;
+}
+.single__location__grid__labels {
+  padding: 0 0 0 50px;
+  text-align: left;
+}
+.single__location__subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.single__location__delete {
+  font-size: 1.5rem;
+  margin: 0;
+}
+.single__location__delete:hover {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 641px) {
+  .ml__container {
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ml__container {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .ml__container {
+    width: 60%;
+  }
+  .single__location__container {
+    margin: 10% 0 0 0;
+  }
+}
