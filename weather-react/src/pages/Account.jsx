@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import LogInForm from "../components/LogInForm";
 import CreateAccountForm from "../components/CreateAccountForm";
 import "../css/index.css";
-import styles from "../css/main.module.css";
 const Account = () => {
   const [isLogin, setIsLogin] = useState(true);
   return (
@@ -12,7 +11,7 @@ const Account = () => {
         {isLogin ? <LogInForm /> : <CreateAccountForm />}
         <section>
           {isLogin ? (
-            <p className={styles.account__question__text}>
+            <p style={{ textAlign: "center" }}>
               Don't have an account?{" "}
               <span
                 style={{ textDecoration: "underline" }}
@@ -22,7 +21,7 @@ const Account = () => {
               </span>
             </p>
           ) : (
-            <p className={styles.account__question__text}>
+            <p style={{ textAlign: "center" }}>
               Have an account?{" "}
               <span
                 style={{ textDecoration: "underline" }}
@@ -33,7 +32,7 @@ const Account = () => {
             </p>
           )}
         </section>
-        <section className={styles.account__question__text}>
+        <section style={{ textAlign: "center" }}>
           <Link to="/">Back Home</Link>
         </section>
       </main>

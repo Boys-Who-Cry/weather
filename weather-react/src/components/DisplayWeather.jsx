@@ -1,15 +1,15 @@
-import styles from "../css/main.module.css";
+import "../css/display_weather.css";
 const DisplayWeather = (props) => {
   const data = props.data;
   console.log(data);
   return (
     <>
       {data && (
-        <article className={styles.displayWeatherGrid}>
-          <section className={styles.displayWeatherGrid__location}>
+        <article className="display__weather__grid">
+          <section className="display__weather__grid__location">
             <h2>{data.name}</h2>
           </section>
-          <section className={styles.displayWeatherGrid__temperature}>
+          <section className="display__weather__grid__temperature">
             <h3>{Math.floor(data.main.temp)}&deg;</h3>
             <section>
               <p>H: {Math.floor(data.main.temp_max)}&deg;</p>

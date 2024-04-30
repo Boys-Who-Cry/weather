@@ -1,0 +1,35 @@
+.display__weather__grid {
+  margin: 15% 0 0 0;
+}
+.display__weather__grid__location,
+.display__weather__grid__temperature,
+.display__weather__grid__weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.display__weather__grid__location h2 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.display__weather__grid__temperature {
+  flex-direction: column;
+}
+.display__weather__grid__temperature h3 {
+  font-size: 1.5rem;
+}
+.display__weather__grid__temperature section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.display__weather__go__home__link {
+  margin: 25px 0 0 0;
+  text-align: center;
+}
+.display__weather__go__home__link p {
+  margin: 0;
+}
